@@ -1,14 +1,14 @@
-node {
+pipeline {
+    agent {
+        docker { image 'ubuntu' }
+    }
     stages {
-        stage('One'){
-            agent {
-                docker{
-                    image 'ubuntu'
+    stage('One'){
+        
+                steps {
+                    git 'https://github.com/adarsh62656/PHPapp.git'
                 }
-            }
-            steps{
-                git 'https://github.com/adarsh62656/PHPapp.git'
-            }
-        }    
+            }    
+        }
     }
 }
