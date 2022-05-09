@@ -7,6 +7,7 @@ pipeline {
         
                 steps {
                     git 'https://github.com/adarsh62656/PHPapp.git'
+                    mkdir adarsh
                 }
             }    
         }
