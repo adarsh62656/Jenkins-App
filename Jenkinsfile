@@ -3,12 +3,11 @@ pipeline {
         docker { image 'ubuntu' }
     }
     stages {
-    stage('One'){
+        stage('One'){
         
                 steps {
                     git 'https://github.com/adarsh62656/PHPapp.git'
                 }
             }    
         }
-    }
 }
