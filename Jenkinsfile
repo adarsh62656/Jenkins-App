@@ -26,6 +26,7 @@ pipeline {
             steps{
                 sh 'docker rm --force nodeapp'
                 sh 'docker rmi adarsh62656/php-app:latest'
+                sh 'docker rm --force mysqlapp'
                 sh 'docker run -d -p 3306:3306 --name mysqlapp adarsh62656/mysql:latest'
                 sh 'docker run -d -p 3000:3000 --name nodeapp adarsh62656/php-app:latest'
                 
