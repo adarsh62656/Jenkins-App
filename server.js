@@ -11,7 +11,7 @@ console.log(process.env.SQL_PASSWORD)
 var con = mysql.createConnection({
   host: "172.17.0.2",
   user: "root",
-  password: process.env.SQL_PASSWORD
+  password: "gnu123"
 });
 
 con.connect(function(err) {
