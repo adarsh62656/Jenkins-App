@@ -7,11 +7,11 @@ const port=3000;
 
 app.get("/", (req, res) => {
 var mysql = require('mysql');
-
+console.log(process.env.SQL_PASSWORD)
 var con = mysql.createConnection({
-  host: "localhost",
+  host: "172.17.0.2",
   user: "root",
-  password: "gnu123"
+  password: process.env.SQL_PASSWORD
 });
 
 con.connect(function(err) {
