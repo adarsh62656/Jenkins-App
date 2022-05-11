@@ -8,6 +8,7 @@ pipeline {
             steps {
 				sh 'docker build -t adarsh62656/php-app:latest .'
                 sh 'docker pull adarsh62656/mysql'
+                sh 'npm install dotenv'
 			}
         }
         stage('Login') {
